@@ -15,6 +15,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Dynamic path to templates dir
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
+# Dynamic path to static dir
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -85,6 +88,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
 
 
 TEMPLATE_DIRS = (
