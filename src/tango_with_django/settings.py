@@ -100,3 +100,8 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute path, no relative paths.
     TEMPLATE_PATH,
 )
+
+
+MEDIA_URL = '/media/'
+# Absolute path to the media dir
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
