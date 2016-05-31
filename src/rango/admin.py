@@ -1,5 +1,13 @@
 from django.contrib import admin
 from rango.models import Category, Page
 
-admin.site.register(Category)
+class PageInline(admin.StackedInline):
+    model = Page
+    extra = 3
+
+class CategoryAdmin(admin.ModelAdmin):
+    fields = ['name']
+    inlines = [PageInline]
+
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(Page)
